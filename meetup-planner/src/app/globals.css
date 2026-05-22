@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-display: 'Gaegu', cursive;
+  --font-body: 'Noto Sans KR', sans-serif;
+  --bg: #faf9f6;
+  --surface: #ffffff;
+  --surface2: #f4f2ee;
+  --border: #e8e4dc;
+  --border-strong: #d4cfc4;
+  --text-primary: #1a1815;
+  --text-secondary: #6b6660;
+  --text-muted: #a09b94;
+  --accent: #e8674a;
+  --accent-light: #fdf0ec;
+  --accent-dark: #c4513a;
+  --teal: #2d8f7b;
+  --teal-light: #e8f4f1;
+  --amber: #d4820f;
+  --amber-light: #fef6e4;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { height: 100%; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  -webkit-font-smoothing: antialiased;
+  /* iOS safe area */
+  padding-top: env(safe-area-inset-top);
+}
+h1, h2, h3 { font-family: var(--font-display); }
+button { cursor: pointer; font-family: var(--font-body); border: none; outline: none; transition: all 0.15s ease; }
+input, textarea, select { font-family: var(--font-body); outline: none; }
+
+.input-field {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  background: var(--surface);
+  color: var(--text-primary);
+  transition: border-color 0.15s;
+  /* Better tap target on mobile */
+  min-height: 44px;
+}
+.input-field:focus { border-color: var(--accent); }
+.input-field::placeholder { color: var(--text-muted); }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
