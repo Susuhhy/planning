@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --font-body: -apple-system, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  --bg: #f5f0eb;
+  --surface: #fffdf9;
+  --surface2: #ede8e1;
+  --border: #d9d0c5;
+  --border-strong: #c4b9aa;
+  --text-primary: #2c2318;
+  --text-secondary: #6b5e52;
+  --text-muted: #a8998a;
+  --accent: #8b6144;
+  --accent-light: #f3ece4;
+  --accent-dark: #6b4930;
+  --teal: #5a7a6a;
+  --teal-light: #e8f0ec;
+  --amber: #a07040;
+  --amber-light: #faf0e0;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { height: 100%; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  -webkit-font-smoothing: antialiased;
+  padding-top: env(safe-area-inset-top);
+}
+h1, h2, h3 { font-family: var(--font-body); }
+button { cursor: pointer; font-family: var(--font-body); border: none; outline: none; transition: all 0.15s ease; }
+input, textarea, select { font-family: var(--font-body); outline: none; }
+
+.input-field {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  background: var(--surface);
+  color: var(--text-primary);
+  transition: border-color 0.15s;
+  min-height: 44px;
+}
+.input-field:focus { border-color: var(--accent); }
+.input-field::placeholder { color: var(--text-muted); }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
